@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom background and text color */
+@layer base {
+  body {
+    @apply bg-[#111827] text-white;
+  }
+
+  /* You can also apply specific colors for other elements if needed */
+  h1, h2, h3, h4, h5, h6, p {
+    color: white; /* Ensures text is visible */
+  }
+
+  /* Optional: Set text color for specific classes */
+  .text-gray-300 {
+    color: #D1D5DB; /* Light gray text for better readability */
+  }
+  .text-yellow-400 {
+    color: #FBBF24; /* Maintain yellow text */
+  }
+  .text-blue-700 {
+    color: #1D4ED8; /* Adjust blue text for better visibility */
+  }
+}

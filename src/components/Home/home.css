@@ -1,0 +1,77 @@
+/* Hover effects for scaling and opacity */
+.fade-hover {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fade-hover:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for buttons */
+button.fade-hover:hover {
+  background-color: #e8f0fe;
+  transform: scale(1.05);
+}
+
+/* Override the slick-dots styling */
+.slick-dots li button:before {
+  color: #fff; /* Dark gray dot color */
+  opacity: 1; /* Make the dots fully visible */
+}
+
+.slick-dots li.slick-active button:before {
+  color: purple; /* White color for active dot */
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+
+/* Add this in your CSS or within Tailwind configuration */
+.perspective {
+  perspective: 1000px;
+}
+
+.card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.group:hover .card-inner {
+  transform: rotateY(180deg);
+}
